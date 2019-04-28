@@ -170,15 +170,33 @@ def user_stats(df):
         print("\nCounts of gender: \n", df['Gender'].value_counts())
 
     # Washington city does not have data for Birth Year; check for column
+    print_birth_year_stats(df)
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+def print_birth_year_stats(df)
+    #print birth year statistis if the data frame has the 'Birth Year' column in its data
     if 'Birth Year' in df.columns:
         # Display earliest, most recent, and most common year of birth
         print("\nEarliest year of birth: ", int(df['Birth Year'].min()))
         print("Recent year of birth: ", int(df['Birth Year'].max()))
         print("Most common year of birth: ", int(df['Birth Year'].mode()[0]))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
+def print_raw_data(df)
+    # Print the raw data to console.
+    #get the dataframe row count
+    row_count = len(df.index)
+    counter = 0
+    msg = ""
+    # prompt user for data view
+    while counter < row_count:
+        view_raw_data = input("\nWould you like to see " + msg + " raw data? Enter yes or no.\n")
+        if view_raw_data.lower() != 'yes':
+            break
+        counter += 5
+        msg = "more"
+        print(df.head(counter))
 
 def main():
     """Main function called when this module is executed from python.
@@ -204,18 +222,8 @@ def main():
         #display user statistics
         user_stats(df)
 
-        #get the dataframe row count
-        row_count = len(df.index)
-        counter = 0
-        msg = ""
-        # prompt user for data view
-        while counter < row_count:
-            view_raw_data = input("\nWould you like to see " + msg + " raw data? Enter yes or no.\n")
-            if view_raw_data.lower() != 'yes':
-                break
-            counter += 5
-            msg = "more"
-            print(df.head(counter))
+        #print raw data if the user chooses to see it
+        print_raw_data(df)
 
         # prompt user if he/she wants to start analyzing other city data
         restart = input('\nWould you like to restart? Enter yes or no.\n')
