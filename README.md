@@ -16,4 +16,4 @@ chicago.csv
 README.md
 
 ### Credits
-Thanks to Udacity for the project.
+Thanks to Udacity for the project - https://github.com/udacity/pdsnd_github
