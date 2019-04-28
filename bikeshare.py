@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-# Dictionary of city data files by name
+# Dictionary of city data files by name - chicago, new york city, and washington
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
