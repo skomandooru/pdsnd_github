@@ -170,14 +170,18 @@ def user_stats(df):
         print("\nCounts of gender: \n", df['Gender'].value_counts())
 
     # Washington city does not have data for Birth Year; check for column
+    print_birth_year_stats(df)
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+def print_birth_year_stats(df)
+    #print birth year statistis if the data frame has the 'Birth Year' column in its data
     if 'Birth Year' in df.columns:
         # Display earliest, most recent, and most common year of birth
         print("\nEarliest year of birth: ", int(df['Birth Year'].min()))
         print("Recent year of birth: ", int(df['Birth Year'].max()))
         print("Most common year of birth: ", int(df['Birth Year'].mode()[0]))
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
 
 def print_raw_data(df)
     # Print the raw data to console.
