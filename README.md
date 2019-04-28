@@ -1,15 +1,19 @@
 ### Date created
-Include the date you created this project and README file.
+4/28/2019
 
 ### Project Title
-Replace the Project Title
+Interactive Bikeshare Statistics
 
 ### Description
-Describe what your project is about and what it does
+This project will prompt the user to select a city, month, and day of the week so that the program can provide bikeshare statistics information to the end user.
 
 ### Files used
-Include the files used
+bikeshare.py
+washington.csv
+new_york_city.csv
+chicago.csv
+.gitignore
+README.md
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Thanks to Udacity for the project.
