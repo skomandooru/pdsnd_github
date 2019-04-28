@@ -181,7 +181,10 @@ def user_stats(df):
 
 
 def main():
-    """Main function called when this module is executed from python."""
+    """Main function called when this module is executed from python.
+       This function will prompt the user for city, month, and day so that it can output
+       bikeshare statistics to the end user.
+    """
     while True:
         #collect city, month, and day
         city, month, day = get_filters()
